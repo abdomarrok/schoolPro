@@ -18,11 +18,12 @@ import java.util.logging.Logger;
 public class mainController {
 
     public void goDashboard(ActionEvent actionEvent) {
-        loadScene("views/dashboard.fxml",actionEvent);
+        loadScene("/com/marrok/schoolmanager/views/dashboard.fxml", actionEvent);
     }
 
+
     private void loadScene(String resourcePath, ActionEvent event) {
-        FXMLLoader loader = new FXMLLoader(mainController.class.getClass().getResource(resourcePath));
+        FXMLLoader loader = new FXMLLoader(mainController.class.getResource(resourcePath));
         try {
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -34,8 +35,7 @@ public class mainController {
             stage.show();
         } catch (IOException ex) {
             Logger.getLogger(mainController.class.getName()).log(Level.SEVERE, "Error loading scene: " + resourcePath, ex);
-            //GeneralUtil.showAlert(Alert.AlertType.ERROR,"Error", "Could not load the requested scene. Please try again later.");
-
+            // GeneralUtil.showAlert(Alert.AlertType.ERROR, "Error", "Could not load the requested scene. Please try again later.");
         }
     }
 }
