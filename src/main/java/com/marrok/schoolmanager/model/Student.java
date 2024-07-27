@@ -1,6 +1,15 @@
 package com.marrok.schoolmanager.model;
 
 public class Student {
+    public Student(Integer id, String fname, String lname, Integer year, Integer contact, Boolean gender, Integer classRooms) {
+        this.id = id;
+        this.fname = fname;
+        this.lname = lname;
+        this.year = year;
+        this.contact = contact;
+        this.gender = gender;
+        this.classRooms = classRooms;
+    }
 
     private Integer id;
 

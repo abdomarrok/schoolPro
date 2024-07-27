@@ -1,5 +1,6 @@
-package com.marrok.schoolmanager.controllers;
+package com.marrok.schoolmanager.controllers.student;
 
+import com.marrok.schoolmanager.model.Student;
 import com.marrok.schoolmanager.model.StudentsModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,17 +15,18 @@ import java.util.ResourceBundle;
 
 public class StudentsController implements Initializable {
 
-    @FXML
-    private TableView<StudentsModel> tbData;
-    @FXML
-    public TableColumn<StudentsModel, Integer> studentId;
+    public TableView<Student> tbData;
+    public TableColumn<Student,Boolean> gender;
+    public TableColumn<Student, Integer> contact;
+    public TableColumn<Student,Integer> year;
 
-    @FXML
-    public TableColumn<StudentsModel, String> firstName;
 
-    @FXML
-    public TableColumn<StudentsModel, String> lastName;
+    public TableColumn<Student, Integer> studentId;
 
+
+    public TableColumn<Student, String> firstName;
+
+    public TableColumn<Student, String> lastName;
     public StudentsController()
     {
 
@@ -36,14 +38,14 @@ public class StudentsController implements Initializable {
         studentId.setCellValueFactory(new PropertyValueFactory<>("StudentId"));
         firstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
         lastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
+
         tbData.setItems(studentsModels);
     }
 
-    private ObservableList<StudentsModel> studentsModels = FXCollections.observableArrayList(
-            new StudentsModel(1,"Amos", "Chepchieng"),
-            new StudentsModel(2,"Amos", "Mors"),
-            new StudentsModel(3,"Amos", "Chepchieng"),
-            new StudentsModel(4,"Amos", "Mors")
+    private ObservableList<Student> studentsModels = FXCollections.observableArrayList(
+            new Student(1,"Amos", "Chepchieng",2004,555555,true,5),
+            new Student(2,"Amos2", "Chepchieng2",2005,555555,true,5),
+            new Student(3,"Amos3", "Chepchieng3",2006,555555,true,5)
     );
 
 

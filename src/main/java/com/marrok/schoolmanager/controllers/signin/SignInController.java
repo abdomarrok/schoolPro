@@ -1,6 +1,5 @@
 package com.marrok.schoolmanager.controllers.signin;
 
-import com.marrok.schoolmanager.controllers.DashboardController;
 import com.marrok.schoolmanager.model.User;
 import com.marrok.schoolmanager.util.DatabaseHelper;
 import com.marrok.schoolmanager.util.GeneralUtil;

@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane styleClass="dashboard_background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="944.0" stylesheets="@../css/all.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marrok.schoolmanager.controllers.DashboardController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marrok.schoolmanager.controllers.dashboard.DashboardController">
    <children>
       <Pane layoutY="-2.0" prefHeight="139.0" prefWidth="950.0" styleClass="dashboard_panel" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -103,7 +103,7 @@
                <children>
                   <TableView fx:id="tbData" prefHeight="349.0" prefWidth="1066.0" stylesheets="@../css/tableview.css">
                      <columns>
-                        <TableColumn fx:id="studentId" prefWidth="75.0" text="StudentId" />
+                        <TableColumn fx:id="id" prefWidth="75.0" text="StudentId" />
                         <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
                         <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
                         <TableColumn fx:id="contact" prefWidth="75.0" text="Contact" />
