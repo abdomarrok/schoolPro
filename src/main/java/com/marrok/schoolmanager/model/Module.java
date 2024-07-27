@@ -1,16 +1,10 @@
 package com.marrok.schoolmanager.model;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "module")
 public class Module {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "module_id", nullable = false)
+
     private Integer id;
 
-    @Column(name = "name", nullable = false)
     private String name;
 
     public Integer getId() {

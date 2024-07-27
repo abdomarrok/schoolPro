@@ -15,6 +15,9 @@ import java.util.ResourceBundle;
 public class DashboardController implements Initializable {
 
 
+    public TableColumn gender;
+    public TableColumn contact;
+    public TableColumn year;
     @FXML
     private TableView<StudentsModel> tbData;
     @FXML

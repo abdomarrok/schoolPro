@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="background" prefHeight="517.0" prefWidth="505.0" stylesheets="@../css/all.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marrok.schoolmanager.controllers.signin.SignInController">
+
+    <ImageView fitHeight="185.0" fitWidth="174.0" layoutX="173.0" layoutY="71.0" AnchorPane.bottomAnchor="297.0" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="71.0">
+        <image>
+            <Image url="@../img/fulllogo.png" />
+        </image>
+    </ImageView>
+    <AnchorPane layoutY="312.0" prefHeight="241.0" prefWidth="519.0" styleClass="btmBackground" stylesheets="@../css/all.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="312.0">
+        <children>
+            <TextField fx:id="userId" layoutX="72.0" layoutY="40.0" prefHeight="45.0" prefWidth="375.0" promptText="اسم المستخدم">
+                <styleClass>
+                    <String fx:value="userId" />
+
+                </styleClass>
+            </TextField>
+            <PasswordField fx:id="password" layoutX="72.0" layoutY="98.0" prefHeight="45.0" prefWidth="375.0" promptText="كلمة المرور">
+                <styleClass>
+                    <String fx:value="password" />
+                    <String fx:value="password-field" />
+                </styleClass>
+            </PasswordField>
+          <Button fx:id="login" alignment="CENTER" contentDisplay="CENTER" layoutX="149.0" layoutY="154.0" onAction="#processLogin" prefHeight="30.0" prefWidth="200.0" styleClass="lgn_btn" text="دخول" />
+        </children>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+    </AnchorPane>
+
+
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

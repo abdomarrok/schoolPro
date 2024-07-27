@@ -40,17 +40,14 @@ dependencies {
     implementation 'com.calendarfx:view:11.10.5'
     implementation 'org.slf4j:slf4j-api:1.7.30'
     implementation 'org.slf4j:slf4j-simple:1.7.30'
-    // Hibernate dependencies
-    implementation 'org.hibernate:hibernate-core:5.5.7.Final'
-    implementation 'javax.xml.bind:jaxb-api:2.3.1'
-    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
-    implementation 'javax.persistence:javax.persistence-api:2.2'
-    implementation 'net.bytebuddy:byte-buddy:1.12.12'
+
 
     // MySQL connector dependency
-    implementation 'mysql:mysql-connector-java:8.0.26'
+    implementation 'mysql:mysql-connector-java:8.0.33'
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+
 }
 
 test {
