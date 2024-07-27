@@ -68,3 +68,13 @@ red FA0C0C
     -fx-background-color: #FFFFFF;
 
 }
+
+/* Background color */
+.drawer_background {
+    -fx-background-color: #434343;
+}
+
+/* Button styles */
+.jfx-button {
+    -fx-text-fill: white;
+}

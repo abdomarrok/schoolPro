@@ -1,34 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.geometry.Insets?>
-<VBox style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marrok.schoolmanager.controllers.NavDrawerController">
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" minWidth="200.0" styleClass="drawer_background" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marrok.schoolmanager.controllers.NavDrawerController">
     <children>
-        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" prefHeight="32.0" prefWidth="220.0" ripplerFill="WHITE" text="Button 1" textFill="#c1fff9">
-            <padding>
-                <Insets bottom="5.0" left="30.0" top="5.0" />
-            </padding>
-        </JFXButton>
-        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0"  prefHeight="32.0" prefWidth="220.0" ripplerFill="WHITE" text="Button 2" textFill="#c1fff9">
-            <padding>
-                <Insets bottom="5.0" left="30.0" top="5.0" />
-            </padding>
-        </JFXButton>
-        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" layoutX="10.0" layoutY="45.0"  prefHeight="32.0" prefWidth="220.0" ripplerFill="WHITE" text="Button 3" textFill="#c1fff9">
-            <padding>
-                <Insets bottom="5.0" left="30.0" top="5.0" />
-            </padding>
-        </JFXButton>
-        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" layoutX="10.0" layoutY="80.0"  prefHeight="32.0" prefWidth="220.0" ripplerFill="WHITE" text="Button 4" textFill="#c1fff9">
-            <padding>
-                <Insets bottom="5.0" left="30.0" top="5.0" />
-            </padding>
-        </JFXButton>
-        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" layoutX="10.0" layoutY="115.0"  prefHeight="32.0" prefWidth="220.0" ripplerFill="WHITE" text="Button 5" textFill="#c1fff9">
-            <padding>
-                <Insets bottom="5.0" left="30.0" top="5.0" />
-            </padding>
-        </JFXButton>
+        <JFXButton fx:id="dashboard_btn" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" graphicTextGap="15.0" ripplerFill="WHITE" styleClass="jfx-button" text="Dashboard" />
+        <JFXButton fx:id="students_btn" alignment="CENTER" focusTraversable="false" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" ripplerFill="WHITE" styleClass="jfx-button" text="Students" />
+        <JFXButton fx:id="classes_btn" focusTraversable="false" graphicTextGap="15.0" layoutX="10.0" layoutY="45.0" ripplerFill="WHITE" styleClass="jfx-button" text="Classes" />
+        <JFXButton fx:id="timetable_btn" focusTraversable="false" graphicTextGap="15.0" layoutX="10.0" layoutY="80.0" minWidth="200.0" ripplerFill="WHITE" styleClass="jfx-button" text="Timetable" />
+        <JFXButton fx:id="setting_btn" focusTraversable="false" graphicTextGap="15.0" layoutX="10.0" layoutY="115.0" minWidth="200.0" ripplerFill="WHITE" styleClass="jfx-button" text="Settings" />
     </children>
 </VBox>
