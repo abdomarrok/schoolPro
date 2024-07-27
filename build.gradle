@@ -40,6 +40,7 @@ dependencies {
     implementation 'com.calendarfx:view:11.10.5'
     implementation 'org.slf4j:slf4j-api:1.7.30'
     implementation 'org.slf4j:slf4j-simple:1.7.30'
+    implementation 'com.jfoenix:jfoenix:9.0.10'
 
 
     // MySQL connector dependency
@@ -48,6 +49,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 
 
+    implementation 'com.tectonica:jonix-project:2024-10-onix308'
 }
 
 test {

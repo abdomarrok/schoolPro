@@ -3,6 +3,8 @@ package com.marrok.schoolmanager.controllers.signin;
 import com.marrok.schoolmanager.model.User;
 import com.marrok.schoolmanager.util.DatabaseHelper;
 import com.marrok.schoolmanager.util.GeneralUtil;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,8 +14,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -38,6 +42,11 @@ public class SignInController implements Initializable {
     private Parent root;
     public ToggleButton switch_them_btn0;
     private final Properties themeProperties = new Properties();
+    @FXML
+    private FontAwesomeIcon exit_btn;
+    @FXML
+    private AnchorPane background;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -80,10 +89,15 @@ public class SignInController implements Initializable {
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
+
         stage.setResizable(false);
         stage.centerOnScreen();
+       // stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
 
 
+    public void exit(MouseEvent mouseEvent) {
+        Platform.exit();
+    }
 }

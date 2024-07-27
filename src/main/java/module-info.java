@@ -7,7 +7,10 @@ module com.marrok.schoolmanager {
     requires java.logging;
     requires org.slf4j;
     requires java.sql;
+    requires com.jfoenix;
     requires javafx.base;
+
+
     opens com.marrok.schoolmanager.model to javafx.base;
     opens com.marrok.schoolmanager to javafx.fxml;
     exports com.marrok.schoolmanager;

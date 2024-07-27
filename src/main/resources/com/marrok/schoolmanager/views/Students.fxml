@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -8,12 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.marrok.schoolmanager.controllers.student.StudentsController"
-            stylesheets="@../css/all.css">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1102.0" styleClass="dashboard_background" stylesheets="@../css/all.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marrok.schoolmanager.controllers.student.StudentsController">
    <children>
-      <Pane prefHeight="139.0" prefWidth="1102.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane prefHeight="139.0" prefWidth="1102.0" styleClass="dashboard_panel" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="73.0" layoutY="30.0" text="Students" textFill="WHITE">
                <font>
@@ -27,7 +25,7 @@
             </Label>
          </children>
       </Pane>
-       <TableView fx:id="tbData" prefHeight="349.0" prefWidth="1066.0" stylesheets="@../css/tableview.css">
+       <TableView fx:id="tbData" layoutX="18.0" layoutY="192.0" prefHeight="349.0" prefWidth="1066.0" stylesheets="@../css/tableview.css">
            <columns>
                <TableColumn fx:id="studentId" prefWidth="75.0" text="StudentId" />
                <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
@@ -42,8 +40,8 @@
        </TableView>
       <Pane layoutX="20.0" layoutY="159.0" prefHeight="33.0" prefWidth="322.0">
          <children>
-            <TextField prefHeight="25.0" prefWidth="322.0" style="-fx-border-color: #2D75E8;" />
-            <FontAwesomeIcon fill="#2d75e8" glyphName="SEARCH" layoutX="302.0" layoutY="18.0" />
+            <TextField layoutX="38.0" layoutY="-7.0" prefHeight="25.0" prefWidth="322.0" style="-fx-border-color: #2D75E8;" />
+            <FontAwesomeIcon fill="#2d75e8" glyphName="SEARCH" layoutX="334.0" layoutY="11.0" />
          </children>
       </Pane>
    </children>

@@ -1,20 +1,31 @@
 package com.marrok.schoolmanager.controllers.dashboard;
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
+import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 import com.marrok.schoolmanager.model.Student;
 import com.marrok.schoolmanager.model.StudentsModel;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DashboardController implements Initializable {
 
@@ -26,13 +37,44 @@ public class DashboardController implements Initializable {
     public TableColumn<Student, String> firstName;
     public TableColumn<Student, String> lastName;
 
+    public JFXDrawer drawer;
+    public JFXHamburger hamburger;
+
     public PieChart pieChart;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        loadDrawer();
         loadChart();
         loadStudents();
+    }
+
+    private void loadDrawer() {
+        try {
+            // TODO
+            VBox box = FXMLLoader.load(getClass().getResource("/com/marrok/schoolmanager/views/NavDrawer.fxml"));
+            drawer.setSidePane(box);
+            drawer.setMinWidth(0); // this is the new code added
+
+        } catch (IOException ex) {
+            Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        HamburgerSlideCloseTransition task = new HamburgerSlideCloseTransition(hamburger);
+        task.setRate(-1);
+        hamburger.addEventHandler(MouseEvent.MOUSE_CLICKED, (Event event) -> {
+            drawer.toggle();
+        });
+        drawer.setOnDrawerOpening((event) -> {
+            task.setRate(task.getRate() * -1);
+            task.play();
+            drawer.setMinWidth(220);
+        });
+        drawer.setOnDrawerClosed((event) -> {
+            task.setRate(task.getRate() * -1);
+            task.play();
+            drawer.setMinWidth(0);
+        });
     }
 
     private void loadChart()
@@ -75,4 +117,7 @@ public class DashboardController implements Initializable {
         tbData.setItems(studentsModels);
     }
 
+    public void exit(MouseEvent mouseEvent) {
+        Platform.exit();
+    }
 }
